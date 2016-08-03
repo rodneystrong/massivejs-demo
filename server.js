@@ -1,6 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var massive = require("massive");
+
+var db = massive.connectSync({
+  db: 'massive_demo'
+});
 
 var app = express();
 app.use(bodyParser.json());
