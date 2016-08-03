@@ -17,7 +17,7 @@ var port = 3000;
 // });
 
 app.get('/incidents', function(req, res) {
-  db.get_all_incidents(function(err, injuries) {
+  db.get_all_incidents(function(err, incidents) {
     res.json(incidents);
   });
 });
